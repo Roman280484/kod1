@@ -47,9 +47,7 @@ import jdehorty/KernelFunctions/2 as kernels
 //                      ...:::....              
 //                .:.:::••••••:::•::..             
 //              .:•:.:•••::::••::••....::.            
-//             ....:••••:••••••••::••:...:•.          
-//            ...:.::::::•••:::•••:•••::.:•..          
-//            ::•:.:•:•••••••:.:•::::::...:..         
+//             ....:••••:••••••••::••:...:•.          //            ...:.::::::•••:::•••:•••::.:•..          :•:•••••••:.:•::::::...:..         
 //  |--------.:•••..•••••••:••:...:::•:•:..:..----------[ADX]    
 //  0        :•:....:•••••::.:::•••::••:.....            
 //           ::....:.:••••••••:•••::••::..:.          
@@ -141,29 +139,7 @@ type FeatureSeries
     float f5
 
 type MLModel
-    int firstBarIndex
-    array<int> trainingLabels
-    int loopSize
-    float lastDistance
-    array<float> distancesArray
-    array<int> predictionsArray
-    int prediction
-
-type FilterSettings 
-    bool useVolatilityFilter
-    bool useRegimeFilter
-    bool useAdxFilter
-    float regimeThreshold
-    int adxThreshold
-
-type Filter
-    bool volatility
-    bool regime
-    bool adx 
-
-// ==========================
-// ==== Helper Functions ====
-// ==========================
+    int firstBarIndex===========
 
 series_from(feature_string, _close, _high, _low, _hlc3, f_paramA, f_paramB) =>
     switch feature_string
